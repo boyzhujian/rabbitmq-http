@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  rabbitmq-http:
+    image: rabbitmq-http
+    ports:
+      - "8082:8080"
+    command: ["/app/rabbitmq-http","-address=0.0.0.0:8080","-amqp=amqp://damon:pass@192.168.3.20:5672/"]
+
